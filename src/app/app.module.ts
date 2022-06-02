@@ -1,15 +1,37 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from '../app/app.component';
+// componenete de las rutas
+import { AppRouter } from './app.routes';
+
+//componentes de para las vistas
+import { LoginComponent } from './components/login/login.component';
+import { UsuarioComponent } from './components/body/usuario/usuario.component';
+import { PerfilComponent } from './components/body/perfil/perfil.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MenuComponent } from './components/menu/menu.component';
+
+// prueba ojo quitarlo despues de la prueba
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    MenuComponent, 
+    LoginComponent,
+    UsuarioComponent,
+    PerfilComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRouter,
+    HttpClientModule,
+    FormsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

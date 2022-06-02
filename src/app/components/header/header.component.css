@@ -1,0 +1,22 @@
+#page {
+    margin: 0px auto;
+    width: 100%;
+}
+
+#header {
+    position: absolute;
+    /* fixed*/
+    top: 0;
+    width: 95%;
+    padding: 24px 28px;
+    background-color: #343a40;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+#content {
+    height: 100%;
+    overflow: auto;
+    padding: 0% 1% 0% 1%;
+    width: 98%;
+}

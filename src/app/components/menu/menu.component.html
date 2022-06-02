@@ -1,0 +1,78 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="nav-side-menu menuvar">
+                <div class="brand">
+                    {{Perfil}} :
+                    <a class="loginPerfil">{{Nombre}} {{Apellido}}</a>
+                </div>
+
+                <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+                <div class="menu-list">
+                    <ul id="menu-content" class="menu-content collapse out">
+
+                        <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
+                            <a class="" routerLink="/perfil"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-theater-masks"></span><i></i> Perfile </a>
+                        </li>
+                        <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
+                            <!---->
+                            <a class="" routerLink="/centroarea"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-compress-arrows-alt"></span><i></i> Centro Area </a>
+                        </li>
+                        <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
+                            <!---->
+                            <a class="" routerLink="/empresautil" ngif='UsuarioPerfil'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-chess-rook"></span><i></i> Empresa a Utilizar </a>
+                        </li>
+                        <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
+                            <!---->
+                            <a class="" routerLink="/tipoequipo"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-compress-arrows-alt"></span><i></i>Tipo Equipo</a>
+                        </li>
+
+                        <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
+                            <a class="" routerLink="/usuario"> &nbsp;&nbsp; &nbsp;&nbsp;<span class="fas fa-user"></span><i></i> Usuario </a>
+                        </li>
+
+                        <!--<li>
+                            <a href="#" class="">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="far fa-file-image"></span><i></i> Registro Impresoras
+                            </a>
+                        </li>-->
+
+                        <li routerLinkActive="active">
+                            <a class="" routerLink="/reportes">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="far fa-file-pdf"></span><i></i> Generar Reportes
+                            </a>
+                        </li>
+                        <li data-toggle="collapse" data-target="#new" class="collapsed" *ngIf='UsuarioPerfil'>
+                            <a class="">&nbsp;&nbsp; &nbsp;<span class="fas fa-sitemap"></span> <i></i> Inventario  
+                            </a>
+                        </li>
+                        <ul class="sub-menu collapse" id="new" ngif='UsuarioPerfil'>
+                            <!--<li routerLinkActive="active">
+                                <a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-atom"></span>&nbsp;<i></i>Accesorios</a>
+                            </li>-->
+                            <!-- <li routerLinkActive="active" ngif='UsuarioPerfil'>
+                                <a routerLink="/equipo">&nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-chalkboard-teacher"></span>&nbsp; <i></i> Equipos </a>
+                            </li>
+                            <li routerLinkActive="active" ngif='UsuarioPerfil'>
+                                <a routerLink="/reporacion"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-drafting-compass"></span>&nbsp; <i></i> En reparacion</a>
+                            </li>-->
+                        </ul>
+                        <!-- <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
+                            <a routerLink="/historial">&nbsp;&nbsp;&nbsp; <span class="fas fa-laptop"></span><i></i>Historial</a>
+                        </li>
+                        <li *ngIf='UsuarioPerfil'>
+                            <a routerLink='/configuracion'>
+                                &nbsp;&nbsp;&nbsp; <span class="fas fa-handshake"></span><i></i>Configuracion de usuario
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)="cerrarsesion()">
+                                &nbsp;&nbsp;&nbsp; <span class="fas fa-person-booth"></span><i></i>Cerrar Session
+                            </a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
