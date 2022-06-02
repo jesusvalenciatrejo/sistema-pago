@@ -28,7 +28,6 @@ export class PerfilComponent  implements OnInit {
   
   // ojo este es el nombre del archivo y esta es la clase del TS private perfilservice: PerfilService
   constructor(  ) {
-
   }
 // tslint:disable-next-line: typedef
 ngOnInit(){
@@ -40,6 +39,7 @@ ngOnInit(){
     this.perfile.FechaModificacion = '';
     this.perfile.Status = '';
 
+    
     this.perfilservice.getPerfil().subscribe( data => {
        this.mostrar = data;
        console.log('hola' + this.mostrar);
