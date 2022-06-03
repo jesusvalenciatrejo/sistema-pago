@@ -1,7 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/body/dashboard/dashboard.component';
 import { UsuarioComponent } from './components/body/usuario/usuario.component';
 import { PerfilComponent } from './components/body/perfil/perfil.component';
+import { UniversidadComponent } from './components/body/universidad/universidad.component';
+import { TipoUniversidadComponent } from './components/body/tipouniversidad/tipouniversidad.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 
@@ -14,19 +17,22 @@ const APP_ROUTES: Routes = [
     { path: 'app-root' ,
        component: AppComponent 
      },
-    { path: 'usuario' ,
-     component: UsuarioComponent
+     { path: 'dashboard' ,
+       component: DashboardComponent
      },
-    { path: 'perfil' , 
-    component: PerfilComponent
-    },
-    /*{ path: 'centroarea' ,
-     component: CentroareaComponent
+     { path: 'usuario' ,
+       component: UsuarioComponent
      },
-    { path: 'empresautil',
-     component: EmpresautilComponent 
-    },
-    { path: 'equipo' ,
+     { path: 'perfil' , 
+      component: PerfilComponent
+     },
+     { path: 'universidad' ,
+      component: UniversidadComponent
+     },
+     { path: 'tipouniversidad',
+      component: TipoUniversidadComponent 
+     },
+    /*{ path: 'equipo' ,
      component: EquipoComponent
      },
     { path: 'tipoequipo' ,

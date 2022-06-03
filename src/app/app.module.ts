@@ -13,7 +13,9 @@ import { UsuarioComponent } from './components/body/usuario/usuario.component';
 import { PerfilComponent } from './components/body/perfil/perfil.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
-
+import { UniversidadComponent } from './components/body/universidad/universidad.component';
+import { TipoUniversidadComponent } from './components/body/tipouniversidad/tipouniversidad.component';
+import { DashboardComponent } from './components/body/dashboard/dashboard.component';
 // prueba ojo quitarlo despues de la prueba
 
 @NgModule({
@@ -22,8 +24,11 @@ import { MenuComponent } from './components/menu/menu.component';
     HeaderComponent,
     MenuComponent, 
     LoginComponent,
+    DashboardComponent,
     UsuarioComponent,
-    PerfilComponent
+    PerfilComponent,
+    UniversidadComponent,
+    TipoUniversidadComponent
   ],
   imports: [
     BrowserModule,

@@ -11,65 +11,82 @@
                 <div class="menu-list">
                     <ul id="menu-content" class="menu-content collapse out">
 
-                        <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
-                            <a class="" routerLink="/perfil"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-theater-masks"></span><i></i> Perfile </a>
-                        </li>
-                        <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
-                            <!---->
-                            <a class="" routerLink="/centroarea"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-compress-arrows-alt"></span><i></i> Centro Area </a>
-                        </li>
-                        <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
-                            <!---->
-                            <a class="" routerLink="/empresautil" ngif='UsuarioPerfil'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-chess-rook"></span><i></i> Empresa a Utilizar </a>
-                        </li>
-                        <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
-                            <!---->
-                            <a class="" routerLink="/tipoequipo"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-compress-arrows-alt"></span><i></i>Tipo Equipo</a>
-                        </li>
-
-                        <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
-                            <a class="" routerLink="/usuario"> &nbsp;&nbsp; &nbsp;&nbsp;<span class="fas fa-user"></span><i></i> Usuario </a>
-                        </li>
-
-                        <!--<li>
-                            <a href="#" class="">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="far fa-file-image"></span><i></i> Registro Impresoras
+                        <li routerLinkActive="active">
+                            <a routerLink='/dashboard'>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-chart-line"></span><i></i>dashboard
                             </a>
-                        </li>-->
+                        </li>
 
                         <li routerLinkActive="active">
+                            <!--*ngIf=''-->
+                            <a class="" routerLink="/perfil"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-theater-masks"></span><i></i> Perfil</a>
+                        </li>
+                        <li routerLinkActive="active">
+                            <!--*ngIf='UsuarioPerfil'-->
+                            <a class="" routerLink="/tarjetapasaje"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-address-card"></span><i></i>Saldo de Tarjeta</a>
+                        </li>
+
+                        <li routerLinkActive="active">
+                            <!--*ngIf='UsuarioPerfil'-->
+                            <a class="" routerLink="/salud"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-clinic-medical"></span><i></i>Salud</a>
+                        </li>
+
+                        <li routerLinkActive="active">
+                            <!-- *ngIf='UsuarioPerfil'-->
+                            <a class="" routerLink="/usuario"> &nbsp;&nbsp; &nbsp;&nbsp;<span class="fas fa-user"></span><i></i> Usuario </a>
+                        </li>
+                        <li routerLinkActive="active">
                             <a class="" routerLink="/reportes">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="far fa-file-pdf"></span><i></i> Generar Reportes
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="far fa-file-pdf"></span><i></i>Reportes Usuario
                             </a>
                         </li>
-                        <li data-toggle="collapse" data-target="#new" class="collapsed" *ngIf='UsuarioPerfil'>
-                            <a class="">&nbsp;&nbsp; &nbsp;<span class="fas fa-sitemap"></span> <i></i> Inventario  
+                        <li data-toggle="collapse" data-target="#new" class="collapsed" routerLinkActive="active">
+                            <a class="">&nbsp;&nbsp; &nbsp;<span class="fas fa-graduation-cap"></span> <i></i> Universidades
                             </a>
                         </li>
-                        <ul class="sub-menu collapse" id="new" ngif='UsuarioPerfil'>
-                            <!--<li routerLinkActive="active">
-                                <a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-atom"></span>&nbsp;<i></i>Accesorios</a>
-                            </li>-->
-                            <!-- <li routerLinkActive="active" ngif='UsuarioPerfil'>
-                                <a routerLink="/equipo">&nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-chalkboard-teacher"></span>&nbsp; <i></i> Equipos </a>
+                        <ul class="sub-menu collapse" id="new">
+                            <li routerLinkActive="active">
+                                <a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-user-graduate"></span>&nbsp;<i></i>Universidad</a>
+                            </li>
+                            <li routerLinkActive="active" ngif='TipoUniversidad'>
+                                <a routerLink="/">&nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-chalkboard-teacher"></span>&nbsp; <i></i> Tipo Universidad </a>
                             </li>
                             <li routerLinkActive="active" ngif='UsuarioPerfil'>
-                                <a routerLink="/reporacion"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-drafting-compass"></span>&nbsp; <i></i> En reparacion</a>
-                            </li>-->
+                                <a routerLink="/"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-gopuram"></span>&nbsp; <i></i>Carreras</a>
+                            </li>
+
                         </ul>
-                        <!-- <li routerLinkActive="active" *ngIf='UsuarioPerfil'>
-                            <a routerLink="/historial">&nbsp;&nbsp;&nbsp; <span class="fas fa-laptop"></span><i></i>Historial</a>
-                        </li>
-                        <li *ngIf='UsuarioPerfil'>
-                            <a routerLink='/configuracion'>
-                                &nbsp;&nbsp;&nbsp; <span class="fas fa-handshake"></span><i></i>Configuracion de usuario
+                        <li data-toggle="collapse" data-target="#new1" class="collapsed" routerLinkActive="active">
+                            <a class="">&nbsp;&nbsp; &nbsp;<span class="fas fa-sitemap"></span> <i></i> Tranporte
                             </a>
+                        </li>
+
+                        <ul class="sub-menu collapse" id="new1">
+                            <li routerLinkActive="active">
+                                <a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-shuttle-van"></span>&nbsp;<i></i>Tranporte Publico</a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a routerLink="/">&nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-ticket-alt"></span>&nbsp; <i></i>Boletos</a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a routerLink="/"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-bus-alt"></span>&nbsp; <i></i>Tipo Tranporte</a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a routerLink="/"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-hourglass-end"></span>&nbsp; <i></i>Tiempos en tranporte</a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a routerLink="/"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-cogs"></span>&nbsp; <i></i>En reparacion de tranporte</a>
+                            </li>
+                        </ul>
+
+                        <li routerLinkActive="active">
+                            <a routerLink="/historial">&nbsp;&nbsp;&nbsp; <span class="far fa-file-pdf"></span><i></i>Reportes del Transporte</a>
                         </li>
                         <li>
                             <a (click)="cerrarsesion()">
                                 &nbsp;&nbsp;&nbsp; <span class="fas fa-person-booth"></span><i></i>Cerrar Session
                             </a>
-                        </li>-->
+                        </li>
                     </ul>
                 </div>
             </div>
