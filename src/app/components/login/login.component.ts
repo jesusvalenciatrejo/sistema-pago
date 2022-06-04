@@ -64,7 +64,7 @@ usuario: UsuarioModel | undefined;
       this.SessionPerfil = sessionStorage.setItem('Perfil' , "Administrador"); // result[0].Perfil
 
       //  alert(sessionStorage.getItem('Nombre') + sessionStorage.getItem('Apellido'));      
-              this.router.navigateByUrl('/usuario');
+              this.router.navigateByUrl('/dashboard');
         //      } else {
           //    alert('Validar los usuarios o Contraseña ');
             //  }

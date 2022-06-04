@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/body/dashboard/dashboard.component';
+import { ConfiguracionComponent } from './components/body/configuracion/configuracion.component'
 import { UsuarioComponent } from './components/body/usuario/usuario.component';
 import { PerfilComponent } from './components/body/perfil/perfil.component';
 import { UniversidadComponent } from './components/body/universidad/universidad.component';
@@ -8,7 +9,7 @@ import { TipoUniversidadComponent } from './components/body/tipouniversidad/tipo
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 
-// import { AuthGuard } from './components/authguardar/guards';
+//import { AuthGuard } from './components/authguardar/guards';
 
 const APP_ROUTES: Routes = [
     { path: 'login' ,
@@ -32,10 +33,10 @@ const APP_ROUTES: Routes = [
      { path: 'tipouniversidad',
       component: TipoUniversidadComponent 
      },
-    /*{ path: 'equipo' ,
-     component: EquipoComponent
+     { path: 'configuracion' ,
+      component: ConfiguracionComponent
      },
-    { path: 'tipoequipo' ,
+    /*{ path: 'tipoequipo' ,
      component: TipoEquipoComponent
      },
     { path: 'reporacion' ,

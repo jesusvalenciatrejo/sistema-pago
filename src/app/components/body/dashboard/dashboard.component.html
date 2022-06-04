@@ -4,226 +4,7 @@
 <div class="panel">
     <div class="card">
         <div class="card-body">
-            <form class="form-inline">
-                <input type="button" class="btn btn-secondary form-control botones" value="Añadir Universidad" data-toggle="modal" data-target="#myModal"> &nbsp;&nbsp;
-                <div class="modal" id="myModal">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Universadas</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
 
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <form class="form-signin">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <div class="md-form">
-                                                <div class="alert alert-danger">
-                                                    <strong>Danger!</strong>* Este Campo Perfil es requerido.
-                                                </div>
-                                                <br>Universidad * :
-                                                <select name="universidad" class="form-control">
-                                                    <option></option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <!--en esta parte ba la de la nomina no esta definido -->
-                                        <!--apartado de la para el select nomina -->
-                                        <div class="col-4">
-                                            <div class="md-form">
-                                                <div class="alert alert-danger">
-                                                    <strong>Danger!</strong>* Este Campo Centro Area es requerido.
-                                                </div>
-                                                <br>Centro de area* : <br>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="md-form">
-                                                <div class="alert alert-danger">
-                                                    <strong>Danger!</strong>* Este Campo Empresa es requerido.
-                                                </div>
-                                                <br>Empresas a utilizar* :
-                                            </div>
-                                        </div>
-
-                                        <div class="col">
-                                            <div class="alert alert-danger">
-                                                <strong>Danger!</strong>* Este Campo Nombre es requerido.
-                                            </div>
-                                            Nombre* :<input type="text" class="form-control" id="" placeholder="Nombre" name="Nombre">
-                                        </div>
-                                        <div class="col">
-                                            <div class="alert alert-danger">
-                                                <strong>Danger!</strong>* Este Campo Apellido Paterno es requerido.
-                                            </div>
-                                            Apellido Paterno* :<input type="text" class="form-control" placeholder="Apellido Paterno" name="ApellidoPaterno">
-                                        </div>
-                                        <div class="col">
-                                            <div class="alert alert-danger">
-                                                <strong>Danger!</strong>* Este Campo Apellido Materno es requerido.
-                                            </div>
-                                            Apellido Materno* :<input type="text" class="form-control" id="" placeholder="Apellido Materno" name="Apellidomaterno">
-                                        </div>
-
-                                        <div class="col">
-                                            <div class="alert alert-danger">
-                                                <strong>Danger!</strong>* Este Campo Area es requerido.
-                                            </div>
-                                            Area* :<input type="text" class="form-control" placeholder="Area donde labora" name="Area">
-                                        </div>
-                                        <div class="col">
-                                            <div class="alert alert-danger">
-                                                <strong>Danger!</strong>* Este Campo Puesto es requerido.
-                                            </div>
-                                            puesto* :<input type="text" class="form-control" id="email" placeholder="Puesto" name="Puesto">
-                                        </div>
-                                        <div class="col">
-                                            <div class="alert alert-danger">
-                                                <strong>Danger!</strong>* Este Campo Extencion es requerido.
-                                            </div>
-                                            Extencion* :<input type="text" class="form-control" placeholder="Extencion" name="Extencion">
-                                        </div>
-                                        <hr>
-                                        <div class="col">
-                                            <div class="md-form">
-                                                Observación :
-                                                <textarea id="form7" class="md-textarea form-control" placeholder="Observaciones" rows="3" name="Observaciones"></textarea>
-                                            </div>
-                                        </div>
-
-                                        <div class="col">
-                                            <div class="md-form">
-                                                <div class="alert alert-danger">
-                                                    <strong>Danger!</strong>* Este Campo Estatus es requerido.
-                                                </div>
-                                                <br> Estatus : <select class="form-control" name="Status">
-                                                <option value="0">Seleccionar</option>
-                                                <option value="1">Activo</option>
-                                                <option value="2">Inacivo</option>
-                                            </select>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <input type="hidden" class="form-control" placeholder="Enter password" name="pswd">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-outline-secondary">Guardar</button>
-                                <!--data-dismiss="modal"-->
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Esta es la parte que pueden editar las informacion en esta session-->
-                <!--   <input type="button" class="btn btn-secondary form-control" value="Edidar Usuario" >&nbsp;&nbsp;-->
-                <div class="modal" id="myModal3">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Usuario para editar</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <form class="form-signin">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <div class="md-form">
-                                                <br> Perfil* :
-                                                <select name="IdPerfil" class="form-control">
-                                                    <option ></option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <!--en esta parte ba la de la nomina no esta definido -->
-                                        <!--apartado de la para el select nomina -->
-                                        <div class="col-4">
-                                            <div class="md-form">
-                                                <br>Centro de area* :<select name="IdCentroArea" class="form-control"> <!--[(ngModel)]='IdCentroArea' (change)="cargarCentro()"-->
-                                                    <option></option> <!--*ngFor="let UsuarioCentroarea of mostrarCentroArea "-->
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="md-form">
-                                                <br>Empresas a utilizar* : <select name="IdEmpresaUtilizar" class="form-control"> <!--[(ngModel)]='IdEmpresaUtilizar' (change)="cargarEmpresa()"-->
-                                                <option></option> <!--*ngFor="let UsuarioEmpresa of mostrarempresaU " value="{{UsuarioEmpresa.Id_EmpresaUtileza}}"-->
-                                            </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col">
-                                            Nombre* :<input type="text" class="form-control" id="" placeholder="Nombre" name="Nombre">
-                                            <!--[(ngModel)]='Usuario.Nombre'-->
-                                        </div>
-                                        <div class="col">
-                                            Apellido Paterno* :<input type="text" class="form-control" placeholder="Apellido Paterno" name="ApellidoPaterno">
-                                            <!--[(ngModel)]='Usuario.ApellidoPaterno'-->
-                                        </div>
-                                        <div class="col">
-                                            Apellido Materno* :<input type="text" class="form-control" id="" placeholder="Apellido Materno" name="Apellido_materno">
-                                            <!--[(ngModel)]='Usuario.ApellidoMaterno'-->
-                                        </div>
-                                        <div class="col">
-                                            Area* :<input type="text" class="form-control" placeholder="Area donde labora" name="Area">
-                                            <!--[(ngModel)]='Usuario.Area'-->
-                                        </div>
-                                        <div class="col">
-                                            puesto* :<input type="text" class="form-control" id=" " placeholder="Puesto" name="Puesto">
-                                            <!--[(ngModel)]='Usuario.Puerto'-->
-                                        </div>
-                                        <div class="col">
-                                            Extencion* :<input type="text" class="form-control" placeholder="Extencion" name="Extencion">
-                                            <!--[(ngModel)]='Usuario.Extencion'-->
-                                        </div>
-                                        <hr>
-
-                                        <div class="col">
-                                            <div class="md-form">
-                                                <br>
-                                                <textarea id="form7" class="md-textarea form-control" placeholder="Observaciones" rows="3" name="Observaciones"></textarea>
-                                                <!-- [(ngModel)]="Usuario.Observaciones"-->
-                                            </div>
-                                        </div>
-
-                                        <div class="col">
-                                            <div class="md-form">
-                                                <br> Estatus* : <select class="form-control" name="Status">
-                                                <option value="0">Seleccionar</option>
-                                                <option value="1">Activo</option>
-                                                <option value="2">Inacivo</option>
-                                            </select>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <input type="hidden" class="form-control" placeholder="Enter password" name="pswd">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-outline-secondary">Guardar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
     <br>
@@ -231,85 +12,64 @@
 
     <div class="card">
         <div class="card-header">
-            Usuario
+            Dashboard
         </div>
         <div class="row">
-            <div class="col-4">
+            <!--cantidad de usuarios -->
+            <div class="col-6">
+                <div>
+                    <div>
+                        <div style="display: block">
+                            <canvas baseChart [data]="doughnutChartData" [type]="doughnutChartType">
+                        </canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-3 activos">
-                <Button type="button" routerLinkActive="active" class="btn btn-outline-secondary ">Activo</Button> &nbsp;&nbsp;
-                <Button type="button" routerLinkActive="active" class="btn btn-outline-secondary ">Inactivo</Button>
+            <!--camiones en sirculacion-->
+            <div class="col-6">
+                <div>
+                    <div>
+                        <div style="display: block">
+                            <canvas baseChart [data]="radarChartData" [options]="radarChartOptions" [type]="radarChartType">
+                        </canvas>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-4">
-                <input type="text" class="form-control buscar" id="" placeholder="Buscar" name="filtro4">
+            <br><br><br><br>
+            <div class="col-6">
+                <div>
+                    <div>
+                        <div>
+                            <div class="grafica" style="display: block">
+                                <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="barChartType" (chartHover)="chartHovered3($event)" (chartClick)="chartClicked3($event)"></canvas>
+                            </div>
+                            <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br>
+            <div class="grafica">
+                <div class="col-6">
+                    <input type="button" class="btn btn-secondary" value="Reporte de Usuarios">
+                </div>
+            </div>
+            <div class="grafica">
+                <div class="col-6">
+                    <input type="button" class="btn btn-secondary" value="Reporte de Transporte">
+                </div>
             </div>
         </div>
 
         <div class="card-body">
-            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <!--*ngFor='let usuario of mostrar '-->
-                        <!--| filter4: filtro4-->
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <!--*ngIf='usuario.Status === 1'-->
-                    </tr>
-                </tbody>
-            </table>
+
         </div>
         <!--datos de la entradas-->
         <div class="card-body">
-            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <!--| filter4: filtro4-->
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <!--*ngIf='usuarioInactivos.Status === 2'-->
-                    </tr>
-                </tbody>
-            </table>
+
         </div>
     </div>
 </div>

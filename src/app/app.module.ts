@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgChartsModule } from 'ng2-charts';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app/app.component';
@@ -9,6 +10,7 @@ import { AppRouter } from './app.routes';
 
 //componentes de para las vistas
 import { LoginComponent } from './components/login/login.component';
+import { ConfiguracionComponent } from './components/body/configuracion/configuracion.component'
 import { UsuarioComponent } from './components/body/usuario/usuario.component';
 import { PerfilComponent } from './components/body/perfil/perfil.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -24,6 +26,7 @@ import { DashboardComponent } from './components/body/dashboard/dashboard.compon
     HeaderComponent,
     MenuComponent, 
     LoginComponent,
+    ConfiguracionComponent,
     DashboardComponent,
     UsuarioComponent,
     PerfilComponent,
@@ -34,7 +37,8 @@ import { DashboardComponent } from './components/body/dashboard/dashboard.compon
     BrowserModule,
     AppRouter,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgChartsModule
   ],
 
   providers: [],
