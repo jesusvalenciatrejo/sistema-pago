@@ -18,7 +18,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { UniversidadComponent } from './components/body/universidad/universidad.component';
 import { TipoUniversidadComponent } from './components/body/tipouniversidad/tipouniversidad.component';
 import { DashboardComponent } from './components/body/dashboard/dashboard.component';
-// prueba ojo quitarlo despues de la prueba
+
+// importaciones de services 
+import { UsuarioService } from './components/service/usuarioservices';
+
+
 
 @NgModule({
   declarations: [
@@ -32,6 +36,7 @@ import { DashboardComponent } from './components/body/dashboard/dashboard.compon
     PerfilComponent,
     UniversidadComponent,
     TipoUniversidadComponent
+
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,11 @@ import { DashboardComponent } from './components/body/dashboard/dashboard.compon
     NgChartsModule
   ],
 
-  providers: [],
+  providers: [
+    UsuarioService
+  ],
+
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

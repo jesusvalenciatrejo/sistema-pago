@@ -254,28 +254,27 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre Completo </th>
-                        <th>Perfil</th>
-                        <th>Centro de Area</th>
-                        <th>Empresa Utilizar</th>
-                        <th>Area</th>
-                        <th>Puesto</th>
-                        <th>Extencion</th>
+                        <th>Telefono</th>
+                        <th>Fecha De Nacimiento</th>
+                        <th>Domicilio</th>
+                        <th>Cod Postal</th>
+                        <th>Numero Interno</th>
                         <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr *ngFor='let usuario of mostrarUsuarioActivo'>
                         <!--*ngFor='let usuario of mostrar '-->
                         <!--| filter4: filtro4-->
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>Activo</td>
+                        <td>{{usuario.id_Usuario}}</td>
+                        <td>{{usuario.nombre}} {{usuario.apellido}}</td>
+
+                        <td>{{usuario.telefono}}</td>
+                        <td>{{usuario.fecha_Nacimineto}}</td>
+                        <td>{{usuario.domicilio}}</td>
+                        <td>{{usuario.codigo_Postal}}</td>
+                        <td>{{usuario.no_Interno}}</td>
+                        <td *ngIf='usuario.status === 1'> Activo</td>
                         <!--*ngIf='usuario.Status === 1'-->
                     </tr>
                 </tbody>
