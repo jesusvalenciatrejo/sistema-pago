@@ -14,6 +14,9 @@ export class UsuarioService {
     getusuario() {
         return this.http.get(this.baseUrl + 'usuario/1',{ headers: this.Headers });
     }
+    getusuarioinactivo() {
+        return this.http.get(this.baseUrl + 'usuario/0',{ headers: this.Headers });
+    }
     // estos dos metodos nos ayudaran para futura programacion
 
     /*

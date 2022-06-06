@@ -240,8 +240,8 @@
             <div class="col-4">
             </div>
             <div class="col-3 activos">
-                <Button type="button" routerLinkActive="active" class="btn btn-outline-secondary ">Activo</Button> &nbsp;&nbsp;
-                <Button type="button" routerLinkActive="active" class="btn btn-outline-secondary ">Inactivo</Button>
+                <Button type="button" routerLinkActive="active" (click)="UsuarioActivo();" class="btn btn-outline-secondary ">Activo</Button> &nbsp;&nbsp;
+                <Button type="button" routerLinkActive="active" (click)="UsuarioInactivo();" class="btn btn-outline-secondary ">Inactivo</Button>
             </div>
             <div class="col-4">
                 <input type="text" class="form-control buscar" id="" placeholder="Buscar" name="filtro4">
@@ -249,7 +249,7 @@
         </div>
 
         <div class="card-body">
-            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%" *ngIf="mostrartabla">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -264,50 +264,46 @@
                 </thead>
                 <tbody>
                     <tr *ngFor='let usuario of mostrarUsuarioActivo'>
-                        <!--*ngFor='let usuario of mostrar '-->
+
                         <!--| filter4: filtro4-->
                         <td>{{usuario.id_Usuario}}</td>
                         <td>{{usuario.nombre}} {{usuario.apellido}}</td>
-
                         <td>{{usuario.telefono}}</td>
                         <td>{{usuario.fecha_Nacimineto}}</td>
                         <td>{{usuario.domicilio}}</td>
                         <td>{{usuario.codigo_Postal}}</td>
                         <td>{{usuario.no_Interno}}</td>
                         <td *ngIf='usuario.status === 1'> Activo</td>
-                        <!--*ngIf='usuario.Status === 1'-->
                     </tr>
                 </tbody>
             </table>
         </div>
         <!--datos de la entradas-->
         <div class="card-body">
-            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%" *ngIf="ocultartabla">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Nombre Completo </th>
-                        <th>Perfil</th>
-                        <th>Centro de Area</th>
-                        <th>Empresa Utilizar</th>
-                        <th>Area</th>
-                        <th>Puesto</th>
-                        <th>Extencion</th>
+                        <th>Telefono</th>
+                        <th>Fecha De Nacimiento</th>
+                        <th>Domicilio</th>
+                        <th>Cod Postal</th>
+                        <th>Numero Interno</th>
                         <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr *ngFor='let usuarioinactivo of mostrarUsuarioInactivo'>
                         <!--| filter4: filtro4-->
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>Inactivo</td>
+                        <td>{{usuarioinactivo.id_Usuario}}</td>
+                        <td>{{usuarioinactivo.nombre}} {{usuarioinactivo.apellido}}</td>
+                        <td>{{usuarioinactivo.telefono}}</td>
+                        <td>{{usuarioinactivo.fecha_Nacimineto}}</td>
+                        <td>{{usuarioinactivo.domicilio}}</td>
+                        <td>{{usuarioinactivo.codigo_Postal}}</td>
+                        <td>{{usuarioinactivo.no_Interno}}</td>
+                        <td *ngIf='usuarioinactivo.status === 0'>Inactivo</td>
                         <!--*ngIf='usuarioInactivos.Status === 2'-->
                     </tr>
                 </tbody>

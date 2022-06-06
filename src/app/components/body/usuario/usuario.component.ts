@@ -10,16 +10,16 @@ import { UsuarioService } from '../../service/usuarioservices';
 
 export class UsuarioComponent implements OnInit {
     // declaracion de variavles globales y de objeto
-
     Usuario = new UsuarioModel();
-
     mostrarUsuarioActivo:any;
+    mostrarUsuarioInactivo:any;
+    mostrartabla= false;
+    ocultartabla= true;
     ////////////////////////////////////////////////
     // ojo este es el nombre del archivo y esta es la clase del TS
     constructor( private usuarioservice: UsuarioService ) { }
 
     ngOnInit(){
-
       this.Usuario.IdUsuario = 0;
       this.Usuario.Nombre = "";
       this.Usuario.Apellido = "";
@@ -36,14 +36,34 @@ export class UsuarioComponent implements OnInit {
 
       this.usuarioservice.getusuario().subscribe( data => {
         this.mostrarUsuarioActivo = data;
-        console.log('hola Activos' + JSON.stringify(this.mostrarUsuarioActivo));
+        //console.log('hola Activos' + JSON.stringify(this.mostrarUsuarioActivo));
      });
 
+     this.usuarioservice.getusuarioinactivo().subscribe( data => {
+      this.mostrarUsuarioInactivo = data;
+      //console.log('hola Activos' + JSON.stringify(this.mostrarUsuarioActivo));
+    });
+ 
+    this.mostrartabla = false;
+    this.ocultartabla = true; 
+  }
+  UsuarioActivo():void{
+    this.mostrartabla = false;
+    this.ocultartabla = true; 
+    this.usuarioservice.getusuario().subscribe( data => {
+      this.mostrarUsuarioActivo = data;
+      //console.log('hola Activos' + JSON.stringify(this.mostrarUsuarioActivo));
+   });
+  }
+  UsuarioInactivo():void {
+    this.mostrartabla = true;
+    this.ocultartabla = false; 
+    this.usuarioservice.getusuarioinactivo().subscribe( data => {
+      this.mostrarUsuarioInactivo = data;
+      //console.log('hola Activos' + JSON.stringify(this.mostrarUsuarioActivo));
+    });
 
-
-     }
-
-
+  }
 
 
 }
