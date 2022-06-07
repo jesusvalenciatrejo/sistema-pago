@@ -13,8 +13,21 @@ export class UsuarioComponent implements OnInit {
     Usuario = new UsuarioModel();
     mostrarUsuarioActivo:any;
     mostrarUsuarioInactivo:any;
-    mostrartabla= false;
-    ocultartabla= true;
+    //boleanas
+        
+    mostrartabla = false;
+    ocultartabla = true;
+    validarNombre = false;
+    validarApellido = false;
+    validarTelefono = false;
+    validarNacimeiento = false;
+    validarDomicilio = false;
+    validraCodigoPostal = false;
+    validarNoInterno = false;
+    validarNoExterno =false;
+    validarStatus =false;
+    data:any;
+
     ////////////////////////////////////////////////
     // ojo este es el nombre del archivo y esta es la clase del TS
     constructor( private usuarioservice: UsuarioService ) { }
@@ -62,8 +75,14 @@ export class UsuarioComponent implements OnInit {
       this.mostrarUsuarioInactivo = data;
       //console.log('hola Activos' + JSON.stringify(this.mostrarUsuarioActivo));
     });
-
   }
 
+  GuardarUsuario():void {
 
+    this.usuarioservice.postusuario(this.Usuario).subscribe( data => {
+    
+    
+    });
+
+  }
 }
