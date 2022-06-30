@@ -40,15 +40,15 @@ usuario: UsuarioModel | undefined;
   ngOnInit() {
 
     this.login = new LoginModel();
-    this.login.IdLogin = 0;
-    this.login.IdUsuario = 0;
-    this.login.Usuario = '';
-    this.login.Contrasena = '';
-    this.login.Status = 0;
+    this.login.id_Login = 0;
+    this.login.id_Usuario = 0;
+    this.login.usuario = '';
+    this.login.contrasena = '';
+    this.login.status = 0;
     
     this.usuario = new UsuarioModel();
-    this.usuario.Nombre = '';
-    this.usuario.Apellido = '';
+    this.usuario.nombre = '';
+    this.usuario.apellido = '';
 
       //reset login status
       //this.authenticationService.logout();

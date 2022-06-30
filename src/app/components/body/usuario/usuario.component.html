@@ -20,11 +20,22 @@
                                 <form class="form-signin">
                                     <div class="row">
                                         <div class="col-4">
+                                            <div *ngIf='validarPerfil' class="alert alert-danger">
+                                                <strong>Danger!</strong>* Este Campo Pefil es requerido.
+                                            </div>
+
+                                            <select name="id_Perfil" class="form-control" [(ngModel)]="id_Perfil" (change)="cargar()">
+                                                <option *ngFor="let UsuarioPerfil of MostrarPerfilActivo " value="{{ UsuarioPerfil.id_Perfil }}">{{ UsuarioPerfil.nombre_Perfil }}</option>
+                                            </select>
+                                        </div>
+
+
+                                        <div class="col-4">
                                             <!-- <div class="md-form">-->
                                             <div *ngIf='validarNombre' class="alert alert-danger">
                                                 <strong>Danger!</strong>* Este Campo Nombre es requerido.
                                             </div>
-                                            Nombre * : <input type="text" class="form-control" id="" placeholder="Nombre" name="Nombre" [(ngModel)]='Usuario.Nombre'>
+                                            Nombre * : <input type="text" class="form-control" id="" placeholder="Nombre" name="Nombre" [(ngModel)]='Usuario.nombre'>
                                             <!--</div>-->
                                         </div>
 
@@ -32,53 +43,53 @@
                                             <div *ngIf='validarApellido' class="alert alert-danger">
                                                 <strong>Danger!</strong>* Este Campo Nombre es requerido.
                                             </div>
-                                            Apellidos * :<input type="text" class="form-control" id="" placeholder="Apellido" name="Apellido" [(ngModel)]='Usuario.Apellido'>
+                                            Apellidos * :<input type="text" class="form-control" id="" placeholder="Apellido" name="Apellido" [(ngModel)]='Usuario.apellido'>
                                             <br>
                                         </div>
                                         <div class="col">
                                             <div *ngIf='validarTelefono' class="alert alert-danger">
                                                 <strong>Danger!</strong>* Este Campo Telefono es requerido.
                                             </div>
-                                            Telefono * :<input type="text" class="form-control" placeholder="Telefono" name="Telefono" [(ngModel)]='Usuario.Telefono'>
+                                            Telefono * :<input type="text" class="form-control" placeholder="Telefono" name="Telefono" [(ngModel)]='Usuario.telefono'>
                                             <br>
                                         </div>
                                         <div class="col">
                                             <div *ngIf='validarNacimeiento' class="alert alert-danger">
                                                 <strong>Danger!</strong>* Este Campo Fecha de Nacimiento es requerido.
                                             </div>
-                                            Fecha de Nacimiento * :<input type="date" class="form-control" id="" name="Fecha_Nacimiento" [(ngModel)]='Usuario.Fecha_Nacimineto'>
+                                            Fecha de Nacimiento * :<input type="date" class="form-control" id="" name="Fecha_Nacimiento" [(ngModel)]='Usuario.fecha_Nacimineto'>
                                             <br>
                                         </div>
                                         <div class="col">
                                             <div *ngIf='validarDomicilio' class="alert alert-danger">
                                                 <strong>Danger!</strong>* Este Campo Domicilio es requerido.
                                             </div>
-                                            Domicilio * :<input type="text" class="form-control" placeholder="Domicilio" name="Domicilio" [(ngModel)]='Usuario.Domicilio'>
+                                            Domicilio * :<input type="text" class="form-control" placeholder="Domicilio" name="Domicilio" [(ngModel)]='Usuario.domicilio'>
                                         </div>
                                         <div class="col">
                                             <div *ngIf="validraCodigoPostal" class="alert alert-danger">
                                                 <strong>Danger!</strong>* Este Campo Codigo Postal requerido.
                                             </div>
-                                            Codigo Postal * :<input type="text" class="form-control" id="" placeholder="Codigo Postal" name="codigoPostal" [(ngModel)]='Usuario.Codigo_Postal'>
+                                            Codigo Postal * :<input type="text" class="form-control" id="" placeholder="Codigo Postal" name="codigoPostal" [(ngModel)]='Usuario.codigo_Postal'>
                                         </div>
                                         <div class="col">
                                             <div *ngif="validarNoInterno" class="alert alert-danger">
                                                 <strong>Danger!</strong>* Este Campo No Interno es requerido.
                                             </div>
-                                            No Interno * :<input type="text" class="form-control" placeholder="No Interno" name="NoInterno" [(ngModel)]='Usuario.No_Interno'>
+                                            No Interno * :<input type="text" class="form-control" placeholder="No Interno" name="NoInterno" [(ngModel)]='Usuario.no_Interno'>
                                         </div>
 
                                         <div class="col">
                                             <div *ngIf="validarNoExterno" class="alert alert-danger">
                                                 <strong>Danger!</strong>* Este Campo No Externo es requerido.
                                             </div>
-                                            No Externo * :<input type="text" class="form-control" placeholder="No Externo" name="NoExterno" [(ngModel)]='Usuario.No_Exterior'>
+                                            No Externo * :<input type="text" class="form-control" placeholder="No Externo" name="NoExterno" [(ngModel)]='Usuario.no_Exterior'>
                                         </div>
                                         <hr>
                                         <div class="col">
                                             <div class="md-form">
                                                 Observación :
-                                                <textarea id="form7" class="md-textarea form-control" placeholder="Observaciones" rows="3" name="Observaciones" [(ngModel)]='Usuario.Obserbacion'></textarea>
+                                                <textarea id="form7" class="md-textarea form-control" placeholder="Observaciones" rows="3" name="Observaciones" [(ngModel)]='Usuario.obserbacion'></textarea>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -86,7 +97,7 @@
                                                 <div *ngif="validarStatus" class="alert alert-danger">
                                                     <strong>Danger!</strong>* Este Campo Estatus es requerido.
                                                 </div>
-                                                <br> Estatus : <select class="form-control" name="Status" [(ngModel)]='Usuario.Status'>
+                                                <br> Estatus : <select class="form-control" name="Status" [(ngModel)]='Usuario.status'>
                                                 <option value="0">Seleccionar</option>
                                                 <option value="1">Activo</option>
                                                 <option value="2">Inacivo</option>

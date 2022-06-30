@@ -1,19 +1,17 @@
 export class UsuarioModel {
-    getusuario() {
-      throw new Error('Method not implemented.');
-    }
-    IdUsuario = 0;
-    IdPerfil = 0;
-    Nombre = "";
-    Apellido = "";
-    Telefono = 0;
-    Fecha_Nacimineto = "";
-    Domicilio = "";
-    Codigo_Postal = 0;
-    No_Interno = 0;
-    No_Exterior= 0;
-    Fecha_Creacion = "";
-    Fecha_Modificacion= "";
-    Obserbacion = "";
-    Status = 0;
+  
+    id_Usuario = 0;
+    id_perfil_id_Perfil = 0;
+    nombre = "";
+    apellido = "";
+    telefono = 0;
+    fecha_Nacimineto = "";
+    domicilio = "";
+    codigo_Postal = 0;
+    no_Interno = 0;
+    no_Exterior= 0;
+    fecha_Creacion = "";
+    fecha_Modificacion= "";
+    obserbacion = "";
+    status = 0;
 }

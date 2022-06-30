@@ -17,31 +17,32 @@
                             </a>
                         </li>
 
-                        <li routerLinkActive="active">
-                            <!--*ngIf=''-->
-                            <a class="" routerLink="/perfil"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-theater-masks"></span><i></i> Perfil</a>
-                        </li>
-                        <li routerLinkActive="active">
-                            <!--*ngIf='UsuarioPerfil'-->
-                            <a class="" routerLink="/tarjetapasaje"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-address-card"></span><i></i>Saldo de Tarjeta</a>
+
+                        <li data-toggle="collapse" data-target="#new0" class="collapsed" routerLinkActive="active">
+                            <a class="">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span class=" fas fa-cog"></span> <i></i> Configuracion Usuario </a>
                         </li>
 
-                        <li routerLinkActive="active">
-                            <!--*ngIf='UsuarioPerfil'-->
-                            <a class="" routerLink="/salud"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-clinic-medical"></span><i></i>Salud</a>
-                        </li>
-
-                        <li routerLinkActive="active">
-                            <!-- *ngIf='UsuarioPerfil'-->
-                            <a class="" routerLink="/usuario"> &nbsp;&nbsp; &nbsp;&nbsp;<span class="fas fa-user"></span><i></i> Usuario </a>
-                        </li>
-                        <li routerLinkActive="active">
-                            <a class="" routerLink="/reportes">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="far fa-file-pdf"></span><i></i>Reportes Usuario
-                            </a>
-                        </li>
+                        <ul class="sub-menu collapse" id="new0">
+                            <li routerLinkActive="active">
+                                <!-- *ngIf='UsuarioPerfil'-->
+                                <a class="" routerLink="/usuario"> &nbsp;&nbsp; &nbsp;&nbsp;<span class="fas fa-user"></span><i></i> Usuario </a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a class="" routerLink="/reportes">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="far fa-file-pdf"></span><i></i>Reportes Usuario
+                                </a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <!--*ngIf=''-->
+                                <a class="" routerLink="/perfil"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-theater-masks"></span><i></i> Perfil</a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <!--*ngIf='UsuarioPerfil'-->
+                                <a class="" routerLink="/salud"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-clinic-medical"></span><i></i>Salud</a>
+                            </li>
+                        </ul>
                         <li data-toggle="collapse" data-target="#new" class="collapsed" routerLinkActive="active">
-                            <a class="">&nbsp;&nbsp; &nbsp;<span class="fas fa-graduation-cap"></span> <i></i> Universidades
+                            <a class="">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span class="fas fa-graduation-cap"></span> <i></i> Universidades
                             </a>
                         </li>
                         <ul class="sub-menu collapse" id="new">
@@ -57,7 +58,7 @@
 
                         </ul>
                         <li data-toggle="collapse" data-target="#new1" class="collapsed" routerLinkActive="active">
-                            <a class="">&nbsp;&nbsp; &nbsp;<span class="fas fa-sitemap"></span> <i></i> Tranporte
+                            <a class="">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span class="fas fa-sitemap"></span> <i></i> Tranporte
                             </a>
                         </li>
 
@@ -77,18 +78,17 @@
                             <li routerLinkActive="active">
                                 <a routerLink="/"> &nbsp;&nbsp;&nbsp;&nbsp; <span class="fas fa-cogs"></span>&nbsp; <i></i>En reparacion de tranporte</a>
                             </li>
+                            <li routerLinkActive="active">
+                                <a routerLink="/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="far fa-file-pdf"></span><i></i>Reportes del Transporte</a>
+                            </li>
                         </ul>
-
                         <li routerLinkActive="active">
-                            <a routerLink="/historial">&nbsp;&nbsp;&nbsp; <span class="far fa-file-pdf"></span><i></i>Reportes del Transporte</a>
+                            <!--*ngIf='UsuarioPerfil'-->
+                            <a class="" routerLink="/tarjetapasaje"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-address-card"></span><i></i>Saldo de Tarjeta</a>
                         </li>
-                        <li routerLinkActive="active">
-                            <a routerLink="/configuracion">&nbsp;&nbsp;&nbsp; <span class=" fas fa-cog"></span><i></i>Configuracion</a>
-                        </li>
-
                         <li>
                             <a (click)="cerrarsesion()">
-                                &nbsp;&nbsp;&nbsp; <span class="fas fa-person-booth"></span><i></i>Cerrar Session
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fas fa-person-booth"></span><i></i>Cerrar Session
                             </a>
                         </li>
                     </ul>

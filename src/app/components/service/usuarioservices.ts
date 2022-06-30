@@ -17,6 +17,6 @@ export class UsuarioService {
     }
     postusuario(usuario:any){
          console.log(this.baseUrl + 'crearusuario',usuario);
-         return this.http.post(this.baseUrl + 'crearusuario' , usuario , { headers: {'content-type': 'application/x-www-form-urlencoded' } });
+         return this.http.post(this.baseUrl + 'crearusuario' , usuario , { headers: {'content-type': 'application/json' } });
     }
 }

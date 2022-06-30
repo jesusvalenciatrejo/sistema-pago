@@ -18,11 +18,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { UniversidadComponent } from './components/body/universidad/universidad.component';
 import { TipoUniversidadComponent } from './components/body/tipouniversidad/tipouniversidad.component';
 import { DashboardComponent } from './components/body/dashboard/dashboard.component';
-
 // importaciones de services 
 import { UsuarioService } from './components/service/usuarioservices';
-
-
+import { PerfilService } from './components/service/perfilservices';
+// filtro de modulo 
+import { FilterPipePerfil } from './components/filtro/filtropipeperfil';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,8 @@ import { UsuarioService } from './components/service/usuarioservices';
     UsuarioComponent,
     PerfilComponent,
     UniversidadComponent,
-    TipoUniversidadComponent
+    TipoUniversidadComponent,
+    FilterPipePerfil
 
   ],
   imports: [
@@ -47,7 +48,8 @@ import { UsuarioService } from './components/service/usuarioservices';
   ],
 
   providers: [
-    UsuarioService
+    UsuarioService,
+    PerfilService
   ],
 
   bootstrap: [AppComponent]
