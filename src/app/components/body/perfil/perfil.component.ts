@@ -89,6 +89,9 @@ ngOnInit(){
   this.AddActiPerfil= true;
   
   }
+  close() {
+    this.AddActiPerfil= false;
+   }
 
 
 
